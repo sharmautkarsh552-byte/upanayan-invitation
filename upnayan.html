@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upanayan Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  font-family: 'Noto Serif Devanagari', serif;
+  background: linear-gradient(to bottom, #fff3e0, #ffe0b2);
+  overflow-x: hidden;
+  text-align: center;
+}
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  border: 6px solid #d97706;
+}
+h1, h2, h3 { color: #b45309; }
+.section { margin-top: 40px; }
+.names, .parents { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.highlight { color: #b91c1c; font-weight: bold; }
+#countdown { font-size: 24px; margin-top: 20px; color: #b91c1c; font-weight: bold; }
+.petal {
+  position: fixed;
+  top: -10px;
+  width: 15px;
+  height: 15px;
+  background: orange;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: fall linear infinite;
+}
+@keyframes fall {
+  to { transform: translateY(100vh); }
+}
+.music-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #d97706;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>श्रीगणेशाय नमः</h1>
+  <h2>ॐ विष्णवे नमः</h2>
+  <h3>उपनयन–यज्ञोपवीत–संस्कारः</h3>
+  <p style="margin-top:20px; font-weight:bold; color:#7c2d12;">
+  यज्ञोपवीतं परमं पवित्रं प्रजापतेः यत् सहजं पुरस्तात्।<br>
+  आयुष्यमग्र्यं प्रतिमुञ्च शुभ्रं यज्ञोपवीतं बलमस्तु तेजः॥
+  </p>
+  <p style="margin-top:15px; font-weight:bold; color:#7c2d12;">
+  ॐ भूर्भुवः स्वः। तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि।<br>
+  धियो यो नः प्रचोदयात्॥
+  </p>
+  <p>भगवतः अनुग्रहेण अस्माकं पुत्राणां वैदिक-विधिना उपनयन-संस्कारः सम्पन्नः भविष्यति। अतः भवन्तः सपरिवारं समागत्य आशीर्वादं दातुं सादरं आमन्त्र्यन्ते।</p>
+
+  <div id="countdown"></div>
+
+  <div class="section">
+    <h3>संस्कार–ग्रहणकर्तारः</h3>
+    <div class="names">
+      <div>1. अक्षत शर्मा</div>
+      <div>2. नैवेद्य शर्मा</div>
+      <div>3. शिवाङ्क शर्मा</div>
+      <div>4. प्रियांशु शर्मा</div>
+      <div>5. उत्कर्ष शर्मा</div>
+      <div>6. ऋषव शर्मा</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>कार्यक्रमावली</h3>
+    <p>24 March 2026 – लखौरी संस्कारः</p>
+    <p>25 March 2026 – मण्डप-स्थापनम् एवं पूजनम्</p>
+    <p>26 March 2026 – श्रीसत्यनारायण-भगवतः पूजनम्</p>
+    <p class="highlight">27 March 2026 – उपनयन–यज्ञोपवीत–संस्कारः (मुख्य समारोहः)</p>
+  </div>
+
+  <div class="section">
+    <h3>स्थानम्</h3>
+    <p>बेलकुण्डा ग्रामः, राजापाकर मार्गः,<br>महुआ, वैशाली (बिहार)</p>
+  </div>
+
+  <div class="section">
+    <h3>सादर आमन्त्रकाः</h3>
+    <div class="parents">
+      <div>श्री नवजीत शर्मा एवं श्रीमती ब्यूटी कुमारी</div>
+      <div>श्री संतोष शर्मा एवं श्रीमती डेज़ी कुमारी</div>
+      <div>श्री राजेश शर्मा एवं श्रीमती नीता कुमारी</div>
+      <div>श्री मुकेश शर्मा एवं श्रीमती नीतू कुमारी</div>
+    </div>
+  </div>
+
+<script>
+// Countdown
+const eventDate = new Date("March 27, 2026 00:00:00").getTime();
+const countdown = document.getElementById("countdown");
+setInterval(() => {
+  const now = new Date().getTime();
+  const distance = eventDate - now;
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  countdown.innerHTML = "मुख्य समारोह प्रारम्भ होने में: " + days + " दिन " + hours + " घंटे " + minutes + " मिनट " + seconds + " सेकंड";
+}, 1000);
+</script>
+
+</body>
+</html>
